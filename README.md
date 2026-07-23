@@ -31,7 +31,7 @@ https://jahnvi-vyas.github.io/Paradise-Nursery-Shopping-Application/
 Example:
 
 ```
-https://github.com/jahnvi-vyas/Paradise-Nursery-Shopping-Application
+https://github.com/jahnvi-vyas/Paradise-Nursery-Shopping-Application/
 ```
 
 ---

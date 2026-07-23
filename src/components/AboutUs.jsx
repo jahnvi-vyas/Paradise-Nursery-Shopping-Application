@@ -1,42 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import background from "../assets/background.jpg";
+import Header from "./Header";
 
 const AboutUs = () => {
     return (
-        <div
-            className="landing-page"
-            style={{
-                backgroundImage: `url(${background})`,
-            }}
-        >
-            <div className="overlay">
-                <div className="about-container">
-                    <h1>🌿 Paradise Nursery</h1>
+        <>
+            <Header />
+
+            <div className="about-page">
+                <div className="about-card">
+                    <h1>About Paradise Nursery</h1>
 
                     <p>
-                        Welcome to <strong>Paradise Nursery</strong>, your trusted
-                        destination for beautiful and healthy houseplants. Whether you are
-                        decorating your home, brightening your office, or searching for the
-                        perfect gift, we have a wide variety of indoor plants to suit every
-                        space and lifestyle.
+                        Welcome to <strong>Paradise Nursery</strong>, your trusted destination
+                        for beautiful, healthy, and affordable houseplants. We believe that
+                        every home deserves the freshness and beauty of nature.
                     </p>
 
                     <p>
-                        We carefully select each plant to ensure excellent quality and offer
-                        affordable prices, making it easy for everyone to enjoy the beauty
-                        and benefits of nature. Start your green journey with Paradise
-                        Nursery and bring freshness into your everyday life.
+                        Our collection includes a wide range of indoor plants, succulents,
+                        and tropical plants carefully selected to brighten your home,
+                        improve air quality, and create a relaxing atmosphere.
                     </p>
 
-                    <Link to="/plants">
-                        <button className="get-started-btn">
-                            Get Started
-                        </button>
-                    </Link>
+                    <p>
+                        Whether you're a beginner or an experienced plant enthusiast,
+                        Paradise Nursery is here to help you find the perfect plants for
+                        your living or workspace with exceptional quality and customer
+                        service.
+                    </p>
+
+                    <div className="about-features">
+                        <div className="feature-card">
+                            <h3>🌿 Quality Plants</h3>
+                            <p>Healthy plants sourced from trusted nurseries.</p>
+                        </div>
+
+                        <div className="feature-card">
+                            <h3>🚚 Fast Delivery</h3>
+                            <p>Fresh plants delivered safely to your doorstep.</p>
+                        </div>
+
+                        <div className="feature-card">
+                            <h3>💚 Customer Care</h3>
+                            <p>Helping every customer create a beautiful green home.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

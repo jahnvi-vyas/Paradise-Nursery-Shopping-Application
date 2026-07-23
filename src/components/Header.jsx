@@ -7,7 +7,6 @@ import "../App.css";
 const Header = () => {
     const location = useLocation();
 
-    // Total number of items in cart
     const totalQuantity = useSelector(
         (state) => state.cart.totalQuantity
     );
@@ -24,6 +23,13 @@ const Header = () => {
                     className={location.pathname === "/" ? "active-link" : ""}
                 >
                     Home
+                </Link>
+
+                <Link
+                    to="/about"
+                    className={location.pathname === "/about" ? "active-link" : ""}
+                >
+                    About Us
                 </Link>
 
                 <Link

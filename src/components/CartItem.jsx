@@ -2,11 +2,9 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-
 import {
-    increaseQuantity,
-    decreaseQuantity,
-    deleteItem,
+    removeItem,
+    updateQuantity,
 } from "../redux/CartSlice";
 
 const CartItem = () => {
@@ -23,15 +21,25 @@ const CartItem = () => {
     );
 
     const handleIncrease = (id) => {
-        dispatch(increaseQuantity(id));
+        dispatch(
+            updateQuantity({
+                id,
+                amount: 1,
+            })
+        );
     };
 
     const handleDecrease = (id) => {
-        dispatch(decreaseQuantity(id));
+        dispatch(
+            updateQuantity({
+                id,
+                amount: -1,
+            })
+        );
     };
 
     const handleDelete = (id) => {
-        dispatch(deleteItem(id));
+        dispatch(removeItem(id));
     };
 
     const handleCheckout = () => {
@@ -92,27 +100,10 @@ const CartItem = () => {
                                 </strong>
                             </p>
                             <div className="quantity-controls">
-                                <button
-                                    onClick={() =>
-                                        handleDecrease(item.id)
-                                    }
-                                >
-                                    -
-                                </button>
+                                <button onClick={() => handleDecrease(item.id)}>-</button>
                                 <span>{item.quantity}</span>
-                                <button
-                                    onClick={() =>
-                                        handleIncrease(item.id)
-                                    }
-                                >
-                                    +
-                                </button>
-                                <button
-                                    className="delete-btn"
-                                    onClick={() =>
-                                        handleDelete(item.id)
-                                    }
-                                >
+                                <button onClick={() => handleIncrease(item.id)}>+</button>
+                                <button className="delete-btn" onClick={() => handleDelete(item.id)}>
                                     Delete
                                 </button>
                             </div>
