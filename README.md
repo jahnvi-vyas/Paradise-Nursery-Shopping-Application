@@ -19,7 +19,7 @@ Apps with React** course on Coursera.
 Example:
 
 ```
-https://your-username.github.io/Paradise-Nursery-Shopping-Application/
+https://jahnvi-vyas.github.io/Paradise-Nursery-Shopping-Application/
 ```
 
 ---
@@ -31,7 +31,7 @@ https://your-username.github.io/Paradise-Nursery-Shopping-Application/
 Example:
 
 ```
-https://github.com/your-username/Paradise-Nursery-Shopping-Application
+https://github.com/jahnvi-vyas/Paradise-Nursery-Shopping-Application
 ```
 
 ---
